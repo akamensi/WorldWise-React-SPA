@@ -1,0 +1,15 @@
+.nav {
+  background-color: aqua;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* // global so we can aplly on the all app */
+
+.nav :global(.active) {
+  background-color: green;
+}
