@@ -3,7 +3,6 @@ import CityItem from "./CityItem";
 import styles from "./CityList.module.css";
 import Message from "./Message";
 import Spinner from "./Spinner";
-import PropTypes from "prop-types";
 
 function CityList() {
   const { cities, isLoading } = useCities();
@@ -21,10 +20,5 @@ function CityList() {
     </ul>
   );
 }
-
-CityList.propTypes = {
-  cities: PropTypes.object,
-  isLoading: PropTypes.bool,
-};
 
 export default CityList;

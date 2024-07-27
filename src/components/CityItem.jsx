@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styles from "./CityItem.module.css";
 import { Link } from "react-router-dom";
 import { useCities } from "../contexts/CitiesContext";
@@ -29,15 +28,5 @@ function CityItem({ city }) {
     </li>
   );
 }
-
-CityItem.propTypes = {
-  city: PropTypes.shape({
-    cityName: PropTypes.string,
-    emoji: PropTypes.string,
-    date: PropTypes.string,
-    id: PropTypes.number,
-    position: PropTypes.object,
-  }),
-};
 
 export default CityItem;

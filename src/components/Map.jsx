@@ -11,7 +11,7 @@ import {
 } from "react-leaflet";
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
-import PropTypes, { func } from "prop-types";
+
 import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
 import { useUrlPosition } from "../hooks/useUrlPosition";
@@ -92,9 +92,5 @@ function DetectClick() {
     click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
 }
-
-ChangeCenter.propTypes = {
-  position: PropTypes.arrayOf(PropTypes.number),
-};
 
 export default Map;

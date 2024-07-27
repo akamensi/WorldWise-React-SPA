@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
+
 const BASE_URL = "http://localhost:8000";
 const CitiesContext = createContext();
 
@@ -50,10 +50,6 @@ function useCities() {
     throw new Error("CitiesContext was used outside the CitiesProvider");
   return context;
 }
-
-CitiesProvider.propTypes = {
-  children: PropTypes.node,
-};
 
 // eslint-disable-next-line react-refresh/only-export-components
 export { CitiesProvider, useCities };

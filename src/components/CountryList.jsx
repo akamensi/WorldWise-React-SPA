@@ -3,7 +3,6 @@ import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.css";
 import Message from "./Message";
 import Spinner from "./Spinner";
-import PropTypes from "prop-types";
 
 function CountryList() {
   const { cities, isLoading } = useCities();
@@ -27,10 +26,5 @@ function CountryList() {
     </ul>
   );
 }
-
-CountryList.propTypes = {
-  cities: PropTypes.object,
-  isLoading: PropTypes.bool,
-};
 
 export default CountryList;
