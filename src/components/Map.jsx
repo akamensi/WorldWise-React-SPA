@@ -12,22 +12,22 @@ import {
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
 import PropTypes, { func } from "prop-types";
-import { useGeolocation } from "../hooks/UseGeolocation";
+import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 
 function Map() {
   // eslint-disable-next-line no-unused-vars
 
   const { cities } = useCities();
-  const [searchParams] = useSearchParams();
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
     getPosition,
   } = useGeolocation();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
